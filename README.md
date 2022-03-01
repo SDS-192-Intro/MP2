@@ -74,21 +74,21 @@ You will be evaluated on the extent to which your mini-project demonstrates flue
 Everyone that submits an assignment will get credit for this!
 
 * RMarkdown
- * Has your report been knitted to HTML?
- * Have you effectively applied RMarkdown syntax to style your report?
+  * Has your report been knitted to HTML?
+  * Have you effectively applied RMarkdown syntax to style your report?
 * Subsetting Data
- * Have you used the `select()` or `filter()` function to effectively subset the data?
+  * Have you used the `select()` or `filter()` function to effectively subset the data?
 * Aggregating Data
- * Have you used the `group_by()` function in combination with other data wrangling verbs to effectively aggregate the data?
+  * Have you used the `group_by()` function in combination with other data wrangling verbs to effectively aggregate the data?
 * Importing Data
- * Have you successfully imported a CSV into your environment?
+  * Have you successfully imported a CSV into your environment?
 * Code Styling
- * Have you used descriptive variable names?
- * Are you variable names formatted with snake_case?
- * Do you use indenting and white space effectively in your code?
+  * Have you used descriptive variable names?
+  * Are you variable names formatted with snake_case?
+  * Do you use indenting and white space effectively in your code?
 * Cleaning Data
- * Have you successfully convert relevant variables into date formats?
- *  Have you successfully cleaned up name variables in the dataset?
+  * Have you successfully convert relevant variables into date formats?
+  * Have you successfully cleaned up name variables in the dataset?
 
 You may also layer in any learning dimensions evaluated in the previous Mini-Project. 
 
