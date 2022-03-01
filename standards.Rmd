@@ -22,32 +22,59 @@ output:
     code_folding: show
 ---
 
+# GitHub
 
-# Tracing Data Provenance 
+Everyone that submits an assignment will get credit for this!
+
+# RMarkdown
+
+Fill response here..
+
+# Subsetting Data
+
+Fill response here..
+
+# Aggregating Data
+
+Fill response here..
+
+# Importing Data
+
+Fill response here..
+
+# Code Styling
+
+Fill response here..
+
+# Cleaning Data
+
+# Optional
+
+## Tracing Data Provenance 
 
 Fill response here...
 
-# Data Fundamentals
+## Data Fundamentals
 
 Fill response here...
 
-# Univariate Plotting
+## Univariate Plotting
 
 Fill response here...
 
-# Visualization Aesthetics
+## Visualization Aesthetics
 
 Fill response here...
 
-# Visualization Context 
+## Visualization Context 
 
 Fill response here...
 
-# Multivariate Plotting
+## Multivariate Plotting
 
 Fill response here...
 
-# Error Resolution and Problem-Solving
+## Error Resolution and Problem-Solving
 
 Fill response here...
 
