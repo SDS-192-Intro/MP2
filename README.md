@@ -18,11 +18,10 @@ In this mini-project, you will wrangle the [Open Payments](https://openpaymentsd
 ## Get to know Open Payments data
 
 1. Watch:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2IT2YjXFP2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-and 
+[![Open Payments](http://img.youtube.com/vi/2IT2YjXFP2U/0.jpg)](http://www.youtube.com/watch?v=2IT2YjXFP2U)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5f5eIDI0cW8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Nature of Payments](http://img.youtube.com/vi/5f5eIDI0cW8/0.jpg)](http://www.youtube.com/watch?v=5f5eIDI0cW8)
 
 > Note that we will be working with the *General Payments* data for 2020.
 
