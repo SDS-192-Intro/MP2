@@ -46,7 +46,7 @@ In this mini-project, you will wrangle the [Open Payments](https://openpaymentsd
 
 ## Wrangle the data
 
-1. Based on your review of the CMS videos, the data documentation, and Dollars for Docs, decide upon one specific question about the financial relationships between drug and device companies and teaching hospitals or physicians in MA that will motivate your data analysis.
+1. Based on your review of the CMS videos, the data documentation, and Dollars for Docs, decide upon one specific question about the financial relationships represented in the data that will motivate your data analysis.
 2. Analyze the data, applying the data wrangling verbs towards answering the question you've identified. There's likely many different ways you can answer your question. I encourage you to start off **simple**, producing an analysis that just touches the surface of the question. You can layer in more complicated analysis as you go along. You should be able to summarize at least three findings from your analysis. 
 
 ## Write report
@@ -69,10 +69,8 @@ In this mini-project, you will wrangle the [Open Payments](https://openpaymentsd
 
 You will be evaluated on the extent to which your mini-project demonstrates fluency in the following course learning dimensions:
 
-# GitHub
-
-Everyone that submits an assignment will get credit for this!
-
+* GitHub
+  * Everyone that submits an assignment will get credit for this!
 * RMarkdown
   * Has your report been knitted to HTML?
   * Have you effectively applied RMarkdown syntax to style your report?
