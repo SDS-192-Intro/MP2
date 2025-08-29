@@ -1,0 +1,116 @@
+---
+title: "SDS 192 Mini-Project 2"
+subtitle: "SDS 192"
+author: 
+- name: Author One
+  affiliation: Smith College
+- name: Author Two
+  affiliation: Smith College
+- name: Author Three
+  affiliation: Smith College
+date: "`r format(Sys.Date(), '%B %e, %Y')`"
+editor: 
+  mode: source
+output: 
+  html_document:
+    fig_width: 7
+    fig_height: 6
+    fig_caption: true
+    theme: lumen
+    df_print: paged
+    code_folding: show
+---
+
+```{r setup}
+library(tidyverse)
+library(fec20)
+```
+
+```{r helper-chunk}
+# Look at help file
+?contributions
+
+# Note that the contributions data frame only contains the first 1000 rows:
+contributions
+
+# Download full contributions data from web and overwrite contributions using:
+# read_all_*() function.
+# You will need to install the usethis package for this line of code to work
+contributions <- read_all_contributions()
+
+# Now contributions has full 887,829 rows
+contributions
+```
+
+```{r analysis-1}
+# Group member 1 work here!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+```{r analysis-2}
+# Group member 2 work here!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+```{r analysis-3}
+# Group member 3 work here!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+# Blog post
+
+Compose your blog post here...

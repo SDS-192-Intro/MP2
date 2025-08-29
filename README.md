@@ -2,91 +2,85 @@
 
 # Overview
 
-In this mini-project, you will wrangle the [Open Payments](https://openpaymentsdata.cms.gov/) dataset in order to reveal at least three findings about the financial relationships between drug and device companies and certain healthcare providers in MA. You will then write up your findings in a short investigative report (400-500 words), written in RMarkdown. You will study the data documentation, review the data dictionary to select variables for your analysis, and then finally produce your analysis. In your blot post, you will key summarize findings from your analysis.
+> Please note that many aspects of this project are informed by similar projects designed for Professor Albert Kim's and Professor Ben Baumer's SDS 192: Introduction to Data Science courses at Smith College. 
+
+Every year the U.S. Federal Election Commission publishes data that details how candidates and committees raise and spend money in federal elections. In this mini-project, you will perform some data wrangling in order to extrapolate insights from the FEC's campaign contributions dataset in the 2019-2020 election cycle. You will then write up your findings in a short blog post (400-500 words). You will be expected to engage the data wrangling verbs, perform at least one join, and showcase your ability to collaborate effectively in GitHub. In your blog post, you will detail how the data in this dataset was produced, along with what we learn through data wrangling. 
+
+To access the data for this project, you will engage the `fec20` package. The `fec16` package was originally developed by fellow Smithies: Prof Ben Baumer, Rana Gahwagy, Irene Ryan, and Marium A. Tapal! We will use an updated version for this project.
 
 # Learning Goals
 
-* Navigate different forms of data documentation
-* Import a dataset and prepare it for analysis
 * Apply the verbs of data wrangling to produce insights from data
-* Produce a well-styled RMarkdown report
+* Join data across multiple tables
+* Effectively collaborate with team members in GitHub
 * Communicate data findings in writing
 * Evaluate the ethical dimensions of data resources
 
 # Detailed Instructions
 
-## Get to know Open Payments data
+## Establish a GitHub Workflow
 
-1. Watch:
+In this lab, I will expect you to develop a GitHub workflow for the project submission. This means that all group members should create issues associated with tasks they are assigned to in GitHub, work in separate branches of the repo to make those changes, and issue Pull Requests to merge their changes into the project. You should also establish a review process to review each other's code before merging. 
 
-[![Open Payments](http://img.youtube.com/vi/2IT2YjXFP2U/0.jpg)](http://www.youtube.com/watch?v=2IT2YjXFP2U)
+1. After reading all of the requirements of this project, I recommend that you delegate tasks amongst group members, start recording those as Issues in the GitHub repo, and assign Issues to group members. 
 
-[![Nature of Payments](http://img.youtube.com/vi/5f5eIDI0cW8/0.jpg)](http://www.youtube.com/watch?v=5f5eIDI0cW8)
+2. Create separate branches of the repo for each team member.
 
-> Note that we will be working with the *General Payments* data for 2020.
-
-2. Review the [data documentation](https://www.cms.gov/OpenPayments/Downloads/OpenPaymentsDataDictionary.pdf). Specifically, the data dictionary for this dataset spans pages 21-33. To help you make sense of this data, I will note that the unit of observation in this dataset is a transaction (not a physician or recipient!). You should be able to identify each row using the `record_id` column.  
-
-3. Explore the [Data Overview](https://www.cms.gov/OpenPayments/Data) page on the Center for Medicare and Medicaid Service's website to learn more. 
-
-4. Check out ProPublica's [Dollars for Docs](https://projects.propublica.org/docdollars/) platform for inspiration on how this dataset can be used in investigate journalism. 
+3. Decide who will be group member 1, 2, 3, and so on.
 
 ## Set up your environment
 
-1. In RStudio, `File` > `New Project` > `Version Control` > `Git` and then copy the URL to this repo. Open `open_payments_analysis.Rmd` and add your group member's names to the header (lines 5, 7, and 9). 
-2. Navigate to the [General Payment Data – Detailed Dataset 2020 Reporting Year](https://openpaymentsdata.cms.gov/dataset/a08c4b30-5cf3-4948-ad40-36f404619019/data).
-3. Create a filter so that the data only includes Payments made to recipients in Massachusetts. The updated table should have just under 75,000 rows. 
-4. Under the box labeled 'Access', click the link to download the filtered CSV. 
-5. Move this CSV file into the data folder on your local machine. **Note that only one student in your group needs to do this.** The dataset can be pushed to other members of your group.
+4. In RStudio, `File` > `New Project` > `Version Control` > `Git` and then copy the URL to this repo. **Switch to your branch.** 
 
-## Import and prepare data
+5. Open `fec_analysis.qmd` and add your name to the header at the appropriate location (lines 5, 7, and 9). Keep in mind that if you enter your name in the same line number as one of your teammates, you will be dealing with a merge conflict later. This is why it was important to assign numbers in Step 3. At this point I would recommend that you save the file, stage and commit your changes, push the changes to GitHub, have all team members issue their first pull request, merge all of the changes, delete the personal branches, and then recreate the branches for the next round of changes. This will help you practice the workflow and work out any kinks early on. After you've followed these steps, be sure to pull the changes back into RStudio before moving on with the project. 
 
-1. On line 36 of `open_payments_analysis.Rmd`, read the CSV file you just downloaded into a data frame. Be sure to use a descriptive variable name for your data frame. 
-2. Following instructions in the `clean` code chunk to clean the data for analysis. 
+4. Install the `fec20` package:
 
-## Wrangle the data
+`install.packages("remotes")`
+`remotes::install_github("lindsaypoirier/fec20")`
 
-1. Based on your review of the CMS videos, the data documentation, and Dollars for Docs, decide upon one specific question about the financial relationships represented in the data that will motivate your data analysis.
-2. Analyze the data, applying the data wrangling verbs towards answering the question you've identified. There's likely many different ways you can answer your question. I encourage you to start off **simple**, producing an analysis that just touches the surface of the question. You can layer in more complicated analysis as you go along. You should be able to summarize at least three findings from your analysis. 
+## Get to know the FEC data
 
-## Write report
+5. Read about the history and mission of the FEC [here](https://www.fec.gov/about/mission-and-history/).
 
-1. In 400-500 words, you should write up your findings:
-  * Paragraph 1: Introduce the dataset, and the question motivating your analysis
+6. You should review this [README](https://github.com/lindsaypoirier/fec20) as a reference for the data included in these files and as inspiration for your project. Note however, that you may not use the examples in these vignettes in your submission.  
+
+## Wrangle the Data
+
+7. As a group, devise a question about the 2019-2020 campaign contributions, spending, and/or results that you would like to answer with your data. Your question should be concise and should be a question that can be answered with the data available to you via descriptive data analysis. Avoid questions that require predictive analysis or analysis of variables not represented in this dataset.
+
+8. Write one code chunk per team member that leverages some combination of the 6 data wrangling verbs to produce a table or a plot that offers insight into campaign contributions, spending, and/or results in the 2019-2020 election cycle. You must both subset and aggregate the data in some way, and use at least one join in the analysis. All plots must be labeled with all five components of data context. You may help each other write your code chunks, but every team members should ultimately push their own chunk to GitHub. **You should not use the individuals table in `fec20`. This table is too large for many computers to handle.**
+
+> Note that I recommend that you try your best to work within the lines allotted to you, without adding new lines to your code chunk. This means using the down arrow instead of the return key to move to a new line. This will help avoid merge conflicts later on. ...even though I fully trust that you'll become whizzes at fixing those when they arise! :)
+
+9. All code chunks must be reviewed on GitHub.com by at least one other team member following a pull request and before merging, and all team members must review at least one chunk. Reviewers may request changes to the code, edits to the comments, suggestions for better labeling/aeshetics, and/or simply commend their peers' work. The course grader and I will be checking for this when evaluating your submission.
+
+## Write blog post
+
+> Note that you do not need to use the long and elegant GitHub workflow for composing the blog post, as I understand that many students would perfer to write this up in Google Docs and the copy it over to RStudio. The long and elegant workflow is only required for the coding sections of the project. 
+
+10. In 400-500 words, you should write a blog post reporting on your visualization:
+  * Paragraph 1: Introduce the dataset and the question you posed when approaching the analysis. 
   * Paragraph 2: Report on findings from your analysis.
-  * Paragraph 3: Summarize the key takeaway from your analysis and describe at least one ethical concern we should consider when analyzing this data. As a reminder of our ethics framework for this course:
-    * What assumptions and commitments informed the design of this dataset?
-    * Who has had a say in data collection and analysis regarding this dataset? Who has been excluded?
-    * What are the benefits and harms of this dataset, and how are they distributed amongst diverse social groups?
-2. Style your report. You may assign headers, fold code, add a table of contents, add images, etc. Be sure to cite any external sources if applicable. Knit your document. 
-
-## Record standards and submit assignment
-
-1. Open `standards.Rmd`, and under each heading, indicate how the work you completed for this project demonstrated fluency in that standard. Just 1-2 sentences per standard!
-2. When you are done, you should save both .Rmd files, knit the documents, commit changes, and then push changes back to GitHub. That's it for submission. You don't need to submit anything on Moodle. 
+  * Paragraph 3: Summarize the key takeaway from your analysis and describe at least one ethical concern we should consider when joining data across data frames.
+11. Open `contributions.qmd` and briefly describe each team member's contributions to the project. 
+12. When you are done, you should save all .qmd files, render the documents, commit changes, and then push changes back to GitHub. That's it for submission. You don't need to submit anything on Moodle. 
 
 # Evaluation 
 
 You will be evaluated on the extent to which your mini-project demonstrates fluency in the following course learning dimensions:
 
+* Transforming Data
+  * Does the project demonstrate an ability to subset data?
+  * Does the project demonstrate an ability to aggregate data?
+  * Does the project demonstrate an ability to interpret the results of data? wrangling
+* Joining Data
+  * Does the project demonstrate an ability to join to data frames?
+  * Does the project demonstrate an ability to select the most appropriate type of join?
+  * Does the project demonstrate an ability to reflect upon ethical concerns of joining information across data frames?
 * GitHub
-  * Everyone that submits an assignment will get credit for this!
-* RMarkdown
-  * Has your report been knitted to HTML?
-  * Have you effectively applied RMarkdown syntax to style your report?
-* Subsetting Data
-  * Have you used the `select()` or `filter()` function to effectively subset the data?
-* Aggregating Data
-  * Have you used the `group_by()` function in combination with other data wrangling verbs to effectively aggregate the data?
-* Importing Data
-  * Have you successfully imported a CSV into your environment?
-* Code Styling
-  * Have you used descriptive variable names?
-  * Are you variable names formatted with snake_case?
-  * Do you use indenting and white space effectively in your code?
-* Cleaning Data
-  * Have you successfully convert relevant variables into date formats?
-  * Have you successfully cleaned up name variables in the dataset?
-
-You may also layer in any learning dimensions evaluated in the previous Mini-Project. 
+  * Does the project demonstrate an ability to delegate tasks effectively via Issues?
+  * Does the project demonstrate an ability to collaborate across multiple GitHub branches?
+  * Does the project demonstrate an ability to review collaborators' code?
+  
 
