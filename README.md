@@ -49,7 +49,7 @@ In this lab, I will expect you to develop a GitHub workflow for the project subm
 
 7. As a group, devise a question about the 2019-2020 campaign contributions, spending, and/or results that you would like to answer with your data. Your question should be concise and should be a question that can be answered with the data available to you via descriptive data analysis. Avoid questions that require predictive analysis or analysis of variables not represented in this dataset.
 
-8. Write one code chunk per team member that leverages some combination of the 6 data wrangling verbs to produce a table or a plot that offers insight into campaign contributions, spending, and/or results in the 2019-2020 election cycle. You must both subset and aggregate the data in some way, and use at least one join in the analysis. All plots must be labeled with all five components of data context. You may help each other write your code chunks, but every team members should ultimately push their own chunk to GitHub. **You should not use the individuals table in `fec20`. This table is too large for many computers to handle.**
+8. Write one code chunk per team member that leverages some combination of the 6 data wrangling verbs to produce a plot that offers insight into campaign contributions, spending, and/or results in the 2019-2020 election cycle. You must both subset and aggregate the data in some way, and use at least one join in the analysis. All plots must be labeled with all five components of data context. You may help each other write your code chunks, but every team member should ultimately push their own chunk to GitHub. **You should not use the `individuals` table in `fec20`. This table is too large for many computers to handle.**
 
 > Note that I recommend that you try your best to work within the lines allotted to you, without adding new lines to your code chunk. This means using the down arrow instead of the return key to move to a new line. This will help avoid merge conflicts later on. ...even though I fully trust that you'll become whizzes at fixing those when they arise! :)
 
@@ -62,7 +62,10 @@ In this lab, I will expect you to develop a GitHub workflow for the project subm
 10. In 400-500 words, you should write a blog post reporting on your visualization:
   * Paragraph 1: Introduce the dataset and the question you posed when approaching the analysis. 
   * Paragraph 2: Report on findings from your analysis.
-  * Paragraph 3: Summarize the key takeaway from your analysis and describe at least one ethical concern we should consider when joining data across data frames.
+  * Paragraph 3: Summarize the key takeaway from your analysis and describe at least one ethical concern we should consider when analyzing this data. As a reminder of our ethics framework for this course:
+    * What assumptions and commitments informed the design of this dataset?
+    * Who has had a say in data collection and analysis regarding this dataset? Who has been excluded?
+    * What are the benefits and harms of this dataset, and how are they distributed amongst diverse social groups?
 11. Open `contributions.qmd` and briefly describe each team member's contributions to the project. 
 12. When you are done, you should save all .qmd files, render the documents, commit changes, and then push changes back to GitHub. That's it for submission. You don't need to submit anything on Moodle. 
 
@@ -70,17 +73,36 @@ In this lab, I will expect you to develop a GitHub workflow for the project subm
 
 You will be evaluated on the extent to which your mini-project demonstrates fluency in the following course learning dimensions:
 
-* Transforming Data
+* Transforming Data (15 points)
   * Does the project demonstrate an ability to subset data?
   * Does the project demonstrate an ability to aggregate data?
   * Does the project demonstrate an ability to interpret the results of data? wrangling
-* Joining Data
+* Joining Data (15 points)
   * Does the project demonstrate an ability to join to data frames?
   * Does the project demonstrate an ability to select the most appropriate type of join?
-  * Does the project demonstrate an ability to reflect upon ethical concerns of joining information across data frames?
-* GitHub
+* GitHub (15 points)
   * Does the project demonstrate an ability to delegate tasks effectively via Issues?
   * Does the project demonstrate an ability to collaborate across multiple GitHub branches?
   * Does the project demonstrate an ability to review collaborators' code?
-  
+* Ethics (10 points)
+  * Does your blog post demonstrate thoughtful consideration of the ethics of this data collection?
 
+Additionally the following will be factored into your grade:
+
+* All components of the assignment were complete (10 points)
+  * Did you complete the group contract, fill out the contributions statement, and meet the minimum word count?
+  * Was the assignment submitted as an HTML document rendered from Quarto?
+* Relevance of Question and Effectiveness of Analysis (10 points)
+  * Did you develop a question that could be answered with descriptive data analysis?
+  * Did the data analysis that you performed provide enough relevant evidence to address that question?
+* Accuracy and Effectiveness of Conclusions (10 points)
+  * Did your interpretations of the plots demonstrate a thorough understanding of the underlying data?
+  * Were your interpretations of the plots/analysis accurate?
+  * Did the evidence that you cited from your plots support the argument that you developed in the blog post?
+* Visualization Conventions (15 points)
+  * Do you use visual cues effectively on the plot?
+  * Are your axes set to an appropriate scale?
+  * Are the values on your plot legible and clear?
+  * Are there titles and labels for all variables on your plot?
+  * Do your titles and labels accurately identify the unit of observation, variables, filters, geographic context, and temporal context?
+  
